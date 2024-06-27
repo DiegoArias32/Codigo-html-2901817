@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de factorial usando un bucle while</title>
+</head>
+<body>
+    <script>
+        // Calculamos el factorial de un número usando un bucle for
+        let numero;
+        let factorial;
+        let contador;
+
+        numero = 5;
+        factorial = 1;
+
+        for (contador = 1; contador <= numero; contador++) {
+            // Actualizamos el valor de la variable factorial
+            factorial = factorial * contador;
+            // Imprimimos el factorial actual en la consola
+            console.log("El factorial de " + contador + " es " + factorial);
+        }
+    </script>
+</body>
+</html>

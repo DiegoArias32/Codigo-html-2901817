@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Declaración de variables
+        let contMulti, contTa, tabla, multi, numero, resul, par, impar
+
+        // Inicialización de las variables contadores
+        par = 0;
+        impar = 0;
+        contMulti = 5;
+        contTa = 5;
+        numero = 5;
+
+        // Primer ciclo for que recorre la tabla de multiplicar de 1 a numero
+        for(tabla = 1; tabla  <= numero; tabla++){
+
+            // Segundo ciclo for que recorre de 1 a numero
+            for(multi = 1; multi <= numero; multi++){
+
+                // Resultado de la multiplicación de las variables del ciclo actual
+                resul = tabla * multi
+
+                // Condición que evalúa si el resultado de la multiplicación es par o impar
+                if (resul % 2 == 0) {
+                    // Imprime el resultado de la multiplicación y un mensaje indicando que es par
+                    console.log(tabla+ " x " +multi+ " = " +resul+ " buzz");
+                    // Incrementa el contador para pares
+                    par = par + 1;
+                } else {
+                    // Imprime el resultado de la multiplicación y un mensaje indicando que es impar
+                    console.log(tabla+ " x " +multi+ " = " +resul+ " bass");
+                    // Incrementa el contador para impares
+                    impar = impar + 1
+                }
+            }
+        }
+
+        // Imprime el número de pares y el número de impares
+        console.log("hay " +par+ " pares")
+        console.log("hay " +impar+ " impares")
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promedio Edad</title>
+</head>
+<body>
+    <script>
+        // Variables para almacenar el año actual y los años de nacimiento
+        let anioActual;
+        let anioNacimientoUno;
+        let anioNacimientoDos;
+        let anioNacimientoTres;
+
+        // Variables para almacenar las edades de las personas
+        let edadUno;
+        let edadDos;
+        let edadTres;
+
+        // Variables para almacenar la suma de las edades y el promedio de edad
+        let suma;
+        let edadPromedio;
+
+        // Asignar el año actual
+        anioActual = prompt("Pon el año actual");
+
+        // Asignar el año de nacimiento de las personas
+        anioNacimientoUno = prompt("Pon el año de nacimiento de la persona uno");
+        anioNacimientoDos = prompt("Pon el año de nacimiento de la persona dos");
+        anioNacimientoTres = prompt("Pon el año de nacimiento de la persona tres");
+
+        // Calcular las edades de las personas
+        edadUno = anioActual - anioNacimientoUno;
+        edadDos = anioActual - anioNacimientoDos;
+        edadTres = anioActual - anioNacimientoTres;
+
+        // Calcular la suma de las edades y el promedio de edad
+        suma=parseInt(edadUno) + parseInt(edadDos) + parseInt(edadTres);
+        edadPromedio = suma / 3 ;
+
+        // Comprobar la edad de cada persona
+        if(edadUno > 17){
+            console.log("La persona uno tiene " +edadUno+ " años y es mayor de edad");
+        } else {
+            console.log("La persona uno tiene " +edadUno+ " años y es menor de edad");
+        }
+
+        if (edadDos > 17){
+            console.log("La persona dos tiene " +edadDos+ " años y es mayor de edad");
+        } else {
+            console.log("La persona dos tiene " +edadDos+ " años y es menor de edad");
+        }
+
+        if(edadTres > 17){
+            console.log("La persona tres tiene " +edadTres+ " años y es mayor de edad");
+        } else {
+            console.log("La persona tres tiene " +edadTres+ " años y es menor de edad");
+        }
+
+        // Imprimir el promedio de edad
+        console.log("Las 3 personas tienen un promedio de "+edadPromedio+" años");
+    </script>
+</body>
+</html>

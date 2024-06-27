@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de multiplicar del 9</title>
+</head>
+<body>
+    <script>
+        // Declarar las variables numero, contador, multiplicacion y resultado e inicializarlas en 5, 0, 9 y 0 respectivamente
+        let numero;
+        let contador;
+        let multiplicacion;
+        let resultado;
+
+        contador = 0;
+        numero = 5;
+        multiplicacion = 9;
+
+        // Ejecutar mientras la condición contador sea menor a numero
+        while(contador  < numero) {
+            // Incrementar contador en 1, calcular resultado multiplicando multiplicacion por contador, y evaluar si contador es par o impar
+            contador = contador + 1;
+            resultado = multiplicacion * contador;
+
+            if (contador % 2 == 0) {
+                esPar = "Es par";
+
+            } else {
+                esPar = "Es impar";
+
+            }
+
+            // Imprimir en la consola
+            console.log(multiplicacion+ " x " +contador+ " = " +resultado+ " -> " +esPar);
+        }
+    </script>
+</body>
+</html>

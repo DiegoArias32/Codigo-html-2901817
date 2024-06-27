@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par y Impar</title>
+</head>
+<body>
+    <script>
+        // Declarar variables
+        let numero;
+        let contador;
+        let multiplicacion;
+        let resultado;
+        let par;
+        let tabla;
+        let impar;
+        let contPar = 0;
+        let contImpar = 0;
+
+        // Inicializar variables
+        contador = 1;
+        numero = 5;
+        multiplicacion = 1;
+
+        // Iterar mientras contador sea menor o igual a numero
+        while(contador <= numero){
+            // Reiniciar tabla a 1 en cada iteración del bucle exterior
+            for(tabla = 1; tabla <= numero; tabla++){
+                // Calcular el resultado de la multiplicación
+                resultado = contador * multiplicacion;
+                
+                // Verificar si el actual multiplicacion es par
+                if (resultado % 2 === 0) {
+                    // Registrar el resultado y aumentar el contador contPar
+                    console.log(contador+ " x " +tabla+ " = " +resultado+ " (Buzz) ");
+                    contPar++;
+                } else {
+                    // Registrar el resultado y aumentar el contador contImpar
+                    console.log(contador+ " x " +tabla+ " = " +resultado+ " (bass) ");
+                    contImpar++;
+                }
+                // Incrementar la multiplicación
+                multiplicacion++;
+            }
+            // Incrementar el contador
+            contador++;
+            // Reiniciar multiplicacion a 1 para la siguiente iteración del bucle exterior
+            multiplicacion = 1;
+        }
+
+        // Registrar el conteo total de números pares e impares
+        console.log("Cantidad de buzz: " + contPar);
+        console.log("Cantidad de bass: " + contImpar);
+
+</script>
+</body>
+</html>

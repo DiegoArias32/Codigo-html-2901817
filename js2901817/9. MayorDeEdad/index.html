@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Es mayor de edad?</title>
+</head>
+<body>
+    <script>
+        // Declarar variables para almacenar el año actual, el año de nacimiento y la edad de la persona
+        let anioNacimiento;
+        let anioActual;
+        let edad;
+
+        // Pedir al usuario que ingrese el año actual y el año de nacimiento
+        anioActual = prompt("Digite el año actual");
+        anioNacimiento = prompt("Digite su año de nacimiento");
+
+        // Calcular la edad de la persona
+        edad = anioActual - anioNacimiento;
+
+        // Verificar si el resto de la división del año actual entre el año de nacimiento es menor o igual a 0
+        if (anioActual - anioNacimiento <= 0) {
+            // Si la persona aún no ha nacido, mostrar un mensaje que indique que
+            console.log("Año actual: " +anioActual)
+                console.log("año de nacimiento: " +anioNacimiento)
+                console.log("Edad: "+ edad);
+            console.log("El individuo aun no a nacido");
+        } else {
+            // Si la edad de la persona es mayor o igual a 18, mostrar un mensaje que indique que la persona es mayor de edad
+            if (edad >= 18) {
+                console.log("Año actual: " +anioActual)
+                console.log("año de nacimiento: " +anioNacimiento)
+                console.log("Edad: "+ edad);
+                console.log("El tiene " + edad + " años y es mayor de edad");
+            } else {
+                // Si la edad de la persona es menor a 18, mostrar un mensaje que indique que la persona aún no es mayor de edad
+                console.log("Año actual: " +anioActual)
+                console.log("año de nacimiento: " +anioNacimiento)
+                console.log("Edad: "+ edad);
+                console.log("El tiene " + edad + " años y aun no es mayor de edad");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operaciones aritmeticas</title>
+</head>
+<body>
+    <script>
+        // Declarar variables para el primer y segundo número, así como los resultados de las cuatro operaciones aritméticas
+        let numeroUno;
+        let numeroDos;
+        let suma;
+        let resta;
+        let multiplacion;
+        let division;
+
+        // Obtener los primeros y segundos números del usuario utilizando la función prompt
+        numeroUno = prompt("Por favor ingrese el número Uno");
+        numeroDos = prompt("Por favor ingrese el Número Dos");
+
+        // Realizar las cuatro operaciones
+        suma = parseInt(numeroUno) + parseInt(numeroDos);
+        resta = numeroUno - numeroDos; 
+        multiplacion = numeroUno * numeroDos; 
+        division = numeroUno / numeroDos; 
+
+        // Registrar los resultados de las operaciones en la consola
+        console.log("suma: " + suma + " \n"); 
+        console.log("resta: " + resta + " \n");
+        console.log("multiplacion: " + multiplacion + " \n");
+        console.log("division: " + division + " \n");
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+
+    <script>
+        // Declarar variables para almacenar la base y la altura del primer y segundo rectángulo, así como el área de cada rectángulo
+        let rectanguloUno;
+        let rectanguloDos;
+        let baseUno;
+        let baseDos;
+        let alturaUno;
+        let alturaDos;
+
+        // Solicitar al usuario que ingrese la base y altura del primer rectángulo
+        baseUno= prompt("Digite la base del primer rectángulo"); 
+        alturaUno= prompt("Digite la altura del primer rectángulo"); 
+
+        // Solicitar al usuario que ingrese la base y altura del segundo rectángulo
+        baseDos= prompt("Digite la base del segundo rectángulo"); 
+        alturaDos= prompt("Digite la altura del segundo rectángulo"); 
+
+        // Calcular el área de cada rectángulo
+        rectanguloUno= baseUno * alturaUno;
+        rectanguloDos= baseDos * alturaDos;
+
+        // Comprobar si los dos rectángulos tienen el mismo área
+        if(rectanguloUno == rectanguloDos) {
+            // Si ambos rectángulos tienen el mismo área, imprimir un mensaje que indique que
+            console.log("Los dos rectangulos son iguales");
+        } else {
+            // Si los rectángulos tienen áreas diferentes, imprimir un mensaje que indique cuál rectángulo tiene el área mayor
+            if (rectanguloUno > rectanguloDos) {
+                console.log("Rectangulo uno es mayor por: " + rectanguloUno);
+                console.log("Rectangulo dos es menor por: " + rectanguloDos);
+            } else {
+                console.log("Rectangulo uno es menor por: " + rectanguloUno);
+                console.log("Rectangulo dos es mayor por: " + rectanguloDos);
+            }
+        }
+    </script>
+</body>
+</html>

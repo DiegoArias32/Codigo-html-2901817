@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial Mientras</title>
+</head>
+<body>
+    <script>
+        // Declarar las variables numero, contador y factorial e inicializarlas en 5, 0 y 1 respectivamente
+        let numero;
+        let factorial;
+        let contador;
+
+        numero = 5;
+        contador = 0;
+        factorial = 1;
+
+        // Ejecutar mientras la condición contador sea menor a numero
+        while(contador  < numero) {
+            // Incrementar contador en 1, multiplicar factorial por contador, y mostrar el resultado en la consola
+            contador = contador + 1;
+            factorial = factorial * contador;
+
+            console.log("El factorial de " + contador + " es " + factorial);
+        }
+    </script>
+</body>
+</html>

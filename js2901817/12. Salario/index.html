@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salario</title>
+</head>
+<body>
+    <script>
+  // Definir el salario mínimo y el auxilio de transporte
+    let salarioMinimo;
+    let auxilioTransporte;
+    let pagoTotal;
+    let deducciones;
+
+    // Asignar los valores de 1.300.000 y 162.000 a las variables salarioMinimo y auxilioTransporte
+    salarioMinimo = 1300000;
+    auxilioTransporte = 162000;
+    pagoTotal = 0;
+    deducciones = 0;
+
+// Obtener el número de días trabajados y el valor del día a través de los prompts y asignar los valores a las variables diasTrabajados y valorDia
+    diasTrabajados = prompt("Ingresa el número de días trabajados:");
+    valorDia = prompt("Ingresa el valor del día:");
+
+// Calcular el salario total
+    salarioTotal = diasTrabajados * valorDia;
+
+// Agregar el subsidio de transporte si el salario total es mayor a dos salarios mínimos
+    if (salarioTotal > 2 * salarioMinimo) {
+        pagoTotal = salarioTotal + auxilioTransporte;
+    } else {
+        pagoTotal = salarioTotal;
+    }
+
+// Calcular las deducciones
+    if (salarioTotal > 4 * salarioMinimo) {
+        deducciones = salarioTotal * 0.18;
+        deducciones = salarioTotal * 0.04;
+    } else {
+        deducciones = salarioTotal * 0.12;
+}
+
+    let salud;
+    let pension;
+    let arl;
+
+    // Calcular las deducciones de salud, pensión y ARL
+    salud = salarioTotal * 0.12;
+    pension = salarioTotal * 0.16;
+    arl = salarioTotal * 0.052;
+    deducciones = salud + pension + arl;
+
+// Calcular el pago total después de las deducciones
+    let salarioTotalNeto = pagoTotal - deducciones;
+
+// Restar la retención del 0.04 al salario total neto
+    let retencion = 0;
+    if (salarioTotalNeto > 4 * salarioMinimo) {
+        retencion = salarioTotal * 0.04;
+}
+    let salarioTotalNetoConRetencion = salarioTotalNeto - retencion;
+
+// Mostrar el resultado
+    console.log("Dias trabajado: " +diasTrabajados);
+    console.log("Valor del día: " +valorDia+ " COP");
+    console.log("Salario total: " +pagoTotal+ " COP");
+    if (salarioTotal > 2 * salarioMinimo) {
+    console.log("Subsidio de transporte: " +auxilioTransporte+ " COP");
+    } else {
+    console.log(`Subsidio de transporte: 0`);
+}
+    console.log("Deducciones: " +deducciones+ " COP");
+    console.log("Salud: " +salud+ " COP");
+    console.log("Pension: " +pension+ " COP");
+    console.log("ARL:" +arl+ " COP");
+
+    if (salarioTotal * 4 >  salarioMinimo) {
+        console.log("Retención del 0.04: " +retencion+  " COP");
+    } else {
+        console.log(`Retención del 0.04: 0`);
+}
+console.log(`Salario total neto: ${(salarioTotalNetoConRetencion + (salarioTotal > 2 * salarioMinimo ? auxilioTransporte : 0)).toFixed(2)}`);
+</script>
+</body>
+</html>

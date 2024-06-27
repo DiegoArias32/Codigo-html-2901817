@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero mayor</title>
+</head>
+<body>
+    <script>
+        // Declarar variables para almacenar los dos números ingresados por el usuario
+        let numeroUno;
+        let numeroDos;
+
+        // Pedir al usuario que ingrese los dos números
+        numeroUno = parseInt(prompt("Ingrese el primer numero"));
+        numeroDos = parseInt(prompt("Ingrese el segundo numero"));
+
+        // Verificar si los dos números son iguales
+        if (numeroUno == numeroDos) {
+            // Si los números son iguales, mostrar un mensaje que indique que los números son iguales
+            console.log("son iguales");
+        } else {
+            // Si los números no son iguales, verificar cuál es el mayor
+            if (numeroUno > numeroDos) {
+                // Si numeroUno es mayor que numeroDos, mostrar un mensaje que indique que numeroUno es el número más grande
+                console.log("El numero uno es mayor: "  + numeroUno);
+                console.log("El numero dos es menor: "  + numeroDos);
+            } else {
+                // Si numeroUno es menor que numeroDos, mostrar un mensaje que indique que numeroDos es el número más grande
+                console.log("El numero uno es menor: "  + numeroUno);
+                console.log("El numero dos es mayor: "  + numeroDos);
+            }
+        }
+    </script>
+</body>
+</html>

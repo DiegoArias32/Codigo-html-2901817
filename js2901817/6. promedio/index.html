@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promedio</title>
+</head>
+<body>
+    <script>
+        // Declarar variables para almacenar las notas y sus resultados
+        let notaUno;
+        let notaDos;
+        let notaTres;
+        let suma;
+        let promedio;
+
+        // Solicitar al usuario que ingrese la primera nota
+        notaUno = prompt( "Ingrese la primera nota: ");
+
+        // Solicitar al usuario que ingrese la segunda nota
+        notaDos = prompt( "Ingrese la segunda nota: ");
+
+        // Solicitar al usuario que ingrese la tercera nota
+        notaTres = prompt( "Ingrese la tercera nota: ");
+
+        // Convertir cada nota en un número entero y calcular la suma
+        suma = parseInt(notaUno) + parseInt(notaDos) + parseInt(notaTres);
+
+        // Calcular el promedio de las notas
+        promedio = suma / 3;
+
+        // Mostrar el resultado en la consola
+        console.log("suma: " +suma+ "\n");
+        console.log("promedio: " +promedio+ "\n");
+    </script>
+</body>
+</html>
